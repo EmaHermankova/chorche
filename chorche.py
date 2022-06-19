@@ -15,13 +15,26 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 # Create your objects here.
 ev3 = EV3Brick()
 
+prava = Motor(Port.D)
+leva = Motor(Port.A)
+poklop = Motor(Port.C)
+barvicky = ColorSensor(Port.S1)
 
-# Write your program here.
-ev3.speaker.beep()
-leva = Motor(Port.B)
-prava = Motor(Port.C)
-radlice = Motor(Port.D)
+while True:
 
-
-ev3.speaker.beep()
-
+    if barvicky.color() = Green:
+        prava.run_time(250, 3000)
+        leva.run(250, 3000)
+    
+    if barvicky.color() = White:
+        prava.run(250)
+        leva.run(250)
+        
+    if barvicky.color() = Blue:
+        poklop.run_time(250, 100000)
+        
+    if barvicky.color() = Red:
+        prava.run_time(250, 2000)
+        leva.run_time(250, 2000)
+        prava.run(250)
+        leva.run(250)
