@@ -22,18 +22,18 @@ barvicky = ColorSensor(Port.S1)
 
 while True:
 
-    if barvicky.color() = Green:
+    if barvicky.color() == Color.GREEN:
         prava.run_time(250, 3000)
-        leva.run(250, 3000)
+        leva.run_time(250, 3000)
     
-    if barvicky.color() = White:
+    elif barvicky.color() == Color.WHITE:
         prava.run(250)
         leva.run(250)
         
-    if barvicky.color() = Blue:
+    elif barvicky.color() == Color.BLUE:
         poklop.run_time(250, 100000)
         
-    if barvicky.color() = Red:
+    elif barvicky.color() == Color.RED:
         prava.run_time(250, 2000)
         leva.run_time(250, 2000)
         prava.run(250)
